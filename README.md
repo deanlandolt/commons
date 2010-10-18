@@ -77,7 +77,7 @@ binary object (Buffer in Binary/F and node, and Binary in the Binary/B spec).
         assert.ok(bs instanceof require("binary").Binary);
     }
 
-**Note** this probably won't completely work yet
+**NOTE:** this probably won't completely work yet
 
 ## Running the Tests
 
@@ -155,9 +155,9 @@ being able to change the bytes:
     MutableBinary.prototype.set: sets byte at index, returns Number byte
 
 There are certainly uses for more optimized interaction paradigms, like copying
-bytes from some Binary to an MutableBinary. We can specify these with additional
-higher-level interfaces but fundamentally all MutableBinary requires is Binary 
-and a `set` method.
+bytes from some Binary to a MutableBinary. We can specify these with additional
+higher-level interfaces but fundamentally all MutableBinary needs is Binary and
+a `set` method.
 
 MutableBinary says nothing about the length semantics of a Binary object --
 nowhere in the interface is there a means to even alter the length. But some
