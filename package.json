@@ -1,0 +1,21 @@
+{
+    "name": "commonjs",
+    "author": "Dean Landolt <dean@deanlandolt.com>",
+    "dependencies": [],
+    "contributors": [],
+    "keywords": [
+        "js",
+        "commonjs",
+        "standards",
+        "binary",
+        "fs",
+        "node",
+        "narwhal",
+        "ringo",
+        "gpsee",
+        "flusspferd"
+    ],
+    "githubName": "commonjs",
+    "type": "zip",
+    "location": "http://github.com/deanlandolt/commonjs/zipball/master"
+}
