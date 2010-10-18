@@ -1,5 +1,5 @@
 {
-    "name": "commonjs",
+    "name": "commons",
     "author": "Dean Landolt <dean@deanlandolt.com>",
     "dependencies": [],
     "contributors": [],
@@ -15,7 +15,7 @@
         "gpsee",
         "flusspferd"
     ],
-    "githubName": "commonjs",
+    "githubName": "commons",
     "type": "zip",
-    "location": "http://github.com/deanlandolt/commonjs/zipball/master"
+    "location": "http://github.com/deanlandolt/commons/zipball/master"
 }
