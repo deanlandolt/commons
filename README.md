@@ -1,13 +1,11 @@
 # Javascript Commons
 
-## What is it?
-
-A CommonJS shim library
-
-To be clear: this is NOT "CommonJS" the group, nor is this yet sanctioned by
-CommonJS. This is just a (very early and experimental) sketch of what CommonJS
-could be: a small library of shims and some default implementations to get users
-up and running with CommonJS as quickly and painlessly as possible.
+This is a simple library for bootstrapping compatibility into the many nearly
+compatible implementations that exist. It provides shims to make it possible to
+interoperate with code not designed for compatibility and some modules to make
+getting started as quick and painless as possible. We should all be able to
+take advantage of the great work poured into the various javascript runtimes and
+well thought out inside them.
 
 ## Supported Platforms
 
