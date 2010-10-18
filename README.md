@@ -7,6 +7,10 @@ getting started as quick and painless as possible. We should all be able to
 take advantage of the great work poured into the various javascript runtimes and
 well thought out inside them.
 
+Javascript Commons is similar in nature to Apache Commons, but much smaller. You
+could also think of the `commons` module as like CommonJS without the J -- after
+all, the J stands for Java, and that's not our style.
+
 ## Supported Platforms
 
 - node.js
