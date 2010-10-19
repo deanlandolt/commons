@@ -7,9 +7,9 @@ getting started as quick and painless as possible. We should all be able to
 take advantage of the great work poured into the various javascript runtimes and
 well thought out inside them.
 
-Javascript Commons is similar in nature to Apache Commons, but much smaller. You
-could also think of the `commons` module as like CommonJS without the J -- after
-all, the J stands for Java, and that's not our style.
+Te Javascript Commons is similar in nature to the Apache Commons, just not quite
+as huge. You could also think of the `commons` module as like CommonJS without
+the J -- after all, the J stands for Java, and that's not really our style.
 
 ## Supported Platforms
 
@@ -199,9 +199,9 @@ if met with optimism from the CommonJS and node.js communities it will be.
 
 There are no doubt more interesting or useful interfaces we may want to build on
 top of these base specs. For instance we should probably specify methods which
-can be optimized by the runtime (such as `slice`). But what's outlined above
-out to be enought to model the interaction of pretty much every binary class in
-all of javascriptland.
+can be optimized by the runtime (such as `Binary.prototype.slice`). But what is
+outlined above out to be enought to model the interaction of pretty much every
+binary class in all of javascriptland.
 
 So while this prototypal hierarchy will be made available in this library, it is
 really nothing more than javascript engineering porn. As mentioned above: we
