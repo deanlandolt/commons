@@ -1,4 +1,4 @@
-# Javascript Commons
+# The Javascript Commons
 
 This is a simple library for bootstrapping compatibility into the many nearly
 compatible implementations that exist. It provides shims to make it possible to
@@ -208,3 +208,12 @@ really nothing more than javascript engineering porn. As mentioned above: we
 **should not** need instanceof and friends to do useful things with binary data.
 We should be able to work with binary data on all runtimes -- we should be able
 to do this *today*.
+
+## License
+
+The vast majority of this code was lifted from the Persevere's promised-io
+package. As such it is licensed under the AFL or BSD license.
+
+It is as yet undetermined whether this will be a Persevere project or even a
+separate Dojo foundation project, but as this is possible all contributions will
+require a Dojo CLA.
