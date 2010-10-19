@@ -15,7 +15,29 @@
         "gpsee",
         "flusspferd"
     ],
+    "repository": {
+        "type" : "git"
+        "url" : "http://github.com/deanlandolt/commons.git"
+    },
+    "bugs": {
+        "mail" : "npm-@googlegroups.com",
+        "web" : "http://github.com/deanlandolt/commons/issues"
+    },
+    "bin": {
+        "repl": "./bin/repl.js"
+    },
+    "directories": {
+        "doc": "./doc",
+        "man": "./man1",
+        "lib": "./lib"
+    },
+    "main": "./lib/commons",
+    "engines" : {
+        "node": ">=0.2.0",
+        "rhino": true
+    }
     "githubName": "commons",
     "type": "zip",
-    "location": "http://github.com/deanlandolt/commons/zipball/master"
+    "location": "http://github.com/deanlandolt/commons/zipball/master",
+    "license": "AFL/BSD"
 }
