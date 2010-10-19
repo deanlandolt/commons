@@ -7,9 +7,52 @@ getting started as quick and painless as possible. We should all be able to
 take advantage of the great work poured into the various javascript runtimes and
 well thought out inside them.
 
-Te Javascript Commons is similar in nature to the Apache Commons, just not quite
-as huge. You could also think of the `commons` module as like CommonJS without
-the J -- after all, the J stands for Java, and that's not really our style.
+The Javascript Commons is similar in nature to the Apache Commons -- just not
+quite as huge. You could also think of the `commons` package as like CommonJS,
+just without the J -- after all, the J stands for Java, and that's not really
+our style.
+
+## Introduction
+
+This project started as a simple experiment to see if it was feasible to shim
+the native binary types of as many CommonJS platforms as possible to squeeze out
+some small semblance of interoperability. This turns out to be relatively easy
+if you pare back the interfaces you require to a bare minimum. Once you have
+binary-level compatibility it becomes that much easier to coerce various modules
+into interoperability. So that's what we did.
+
+First we ported Kris Zyp's excellent promised-io (TODO link) package to act the
+base for our file system operations. Promises allow sync and async operations
+maintain the same function signatures, which is very nice for some. Others much
+prefer a callback-style signature for any number of reasons: some claim it
+doesn't obscure the asynchronous nature of the operation being called, others
+just think that way and much prefer it. This library will attempt to bridge the
+gap, exposing one unified API for all of these styles.
+
+But isn't this a hopelessly insurmountable religious divide? No. At least, we
+don't think so. Promises get us halfway there -- they can be used to unify
+synchronous and asynchronous signatures. The node-style callback-as-last-arg can
+get us all the way.
+
+We've defined two different styles of streams: evented streams (like what you'd
+see in node) and forEachable streams (like what you'd see in JSGI). If a
+function returns a stream then you will get one or the other, depending on
+whether you passed a callback. We will have converters to switch between either
+as well as helpers to let you do stream manipulation completely neutrally.
+
+**NOTE** callback-style and evented streams are NYI
+**TODO** still an open issue on how to handle node *Sync APIs -- as it stands
+what would get returned are promises. One solution could be to return sync if no
+callback is provided before the program enters its event loop but then switch to
+returning promises after (or punching the developer in the face -- we could make
+that optional as well).
+
+
+Conveniently, bridging the various native binary implementations also allows us
+to roll in a big chunk of narwhal-lib (TODO link), a package that is chock full
+of useful utilities but was difficult to use on node.js because of its lack of
+engine overlays. Often only very simple binary operations were required so we
+can all use this code now.
 
 ## Supported Platforms
 
@@ -26,7 +69,7 @@ the J -- after all, the J stands for Java, and that's not really our style.
 - ejscript
 - MonkeyScript
 
-Abd any others we are missing...
+And any others we are missing...
 
 ## Usage
 
@@ -117,8 +160,8 @@ We have been suffering with the false-chioce of lowest common denominator APIs
 and more useful but runtime-specific classes for too long. We can have both and
 still enjoy some level of interoperability.
 
-**TODO:** describe binary, stream, and fs libs and how fs (and other io libs) can
-be used interchangably in both a callback/evented-stream context or a
+**TODO:** describe binary, stream, and fs libs and how fs (and other io libs)
+can be used interchangeably in both a callback/evented-stream context or a
 synchronous/promised/forEach-stream context
 
 ## Rationale
@@ -200,7 +243,7 @@ if met with optimism from the CommonJS and node.js communities it will be.
 There are no doubt more interesting or useful interfaces we may want to build on
 top of these base specs. For instance we should probably specify methods which
 can be optimized by the runtime (such as `Binary.prototype.slice`). But what is
-outlined above out to be enought to model the interaction of pretty much every
+outlined above out to be enough to model the interaction of pretty much every
 binary class in all of javascriptland.
 
 So while this prototypal hierarchy will be made available in this library, it is
