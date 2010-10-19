@@ -16,7 +16,7 @@
         "flusspferd"
     ],
     "repository": {
-        "type" : "git"
+        "type" : "git",
         "url" : "http://github.com/deanlandolt/commons.git"
     },
     "bugs": {
@@ -35,7 +35,7 @@
     "engines" : {
         "node": ">=0.2.0",
         "rhino": true
-    }
+    },
     "githubName": "commons",
     "type": "zip",
     "location": "http://github.com/deanlandolt/commons/zipball/master",
