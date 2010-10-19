@@ -93,6 +93,24 @@ Or for just the binary tests:
 
     <runtime> lib/commons/binary.js
 
+## The Process Module
+
+We sniff the runtime and javascript engine and expose it in the process module:
+
+    require("commons/process").runtime;
+
+To find out what javascript engine your on:
+
+    require("commons/process").engine;
+
+Bear in mind: forking based on the underlying runtime or engine should be
+avoided at all costs -- it's functionally equivalent to user-agent sniffing and
+is probably just as bad.
+
+**TODO** right now if you require("commons") we adding process as a global for
+node compatibility -- we should probably have more switches for shimming, maybe
+`require("commons/runtime/node").shim()` or some such would be best.
+
 ## Philosophy
 
 We have been suffering with the false-chioce of lowest common denominator APIs
