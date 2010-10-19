@@ -41,6 +41,7 @@ whether you passed a callback. We will have converters to switch between either
 as well as helpers to let you do stream manipulation completely neutrally.
 
 **NOTE** callback-style and evented streams are NYI
+
 **TODO** still an open issue on how to handle node *Sync APIs -- as it stands
 what would get returned are promises. One solution could be to return sync if no
 callback is provided before the program enters its event loop but then switch to
