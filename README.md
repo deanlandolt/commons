@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/deanlandolt/commons.png)](http://travis-ci.org/deanlandolt/commons)
 # The Javascript Commons
 
 This is a simple library for bootstrapping compatibility into the many nearly
